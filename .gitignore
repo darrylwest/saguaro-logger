@@ -1,0 +1,9 @@
+.DS_Store
+__MACOSX
+*.xcuserstate
+*.hmap
+*.ipa
+*.log
+build/
+*.pbxuser
+
