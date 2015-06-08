@@ -1,4 +1,4 @@
-# sanguaro logger
+# saguaro logger
 _A multi-level logger for iOS/OSX applications_
 
 ## Features
@@ -18,6 +18,7 @@ _A multi-level logger for iOS/OSX applications_
 ## How to use
 
 ```
+// create a logger with the default log level
 let log = SALogger().createLogger( "MyCategory" )
 
 log.info("this is a message") // MyCategory 13:34:44.244 info this is a message
