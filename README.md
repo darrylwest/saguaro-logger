@@ -1,14 +1,15 @@
 # saguaro logger
-_A multi-level logger for iOS/OSX applications_
+_A multi-level, multi-target logger for iOS/OSX applications_
 
 ## Features
 
-* log levels: trace, debug, info, warn, error and fatal levels
-* flexible formatters with default to `category HH:MM:ss.SSS LEVEL message`
-* appenders to specify targets like console, file, rolling file, websockets, etc
-* ability to change log levels on the fly
-* domain and category attributes
-* ability to add custom appenders
+* log levels: trace, debug, info, warn, error levels
+* log message includes category (class name)
+* flexible formatters with default to `category HH:mm:ss.SSS LEVEL message`
+* appenders to specify targets like console, file, rolling file, websockets, json, etc
+* ability to change log levels on the fly by category or appender target
+* simple protocol gives the ability to easily create add custom appenders
+* log manager to create a pool of managed logs
 
 ## Installation
 
@@ -18,7 +19,7 @@ _A multi-level logger for iOS/OSX applications_
 ## How to use
 
 ```
-// create a logger with the default log level
+// create a console logger with the default info log level
 let log = SALogger().createLogger( "MyCategory" )
 
 log.info("this is a message") // MyCategory 13:34:44.244 info this is a message
