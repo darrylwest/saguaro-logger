@@ -13,6 +13,7 @@ public enum LogLevel: Int {
 }
 
 public protocol Logger {
+    var category:String { get }
     var isDebug:Bool { get }
     func debug(msg:String)
     func info(msg:String)
