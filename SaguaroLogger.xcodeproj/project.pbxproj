@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA4796D51B27A60400333F00 /* SALogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4796D41B27A60400333F00 /* SALogManager.swift */; };
+		BA4796D71B27A63D00333F00 /* SALogManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4796D61B27A63D00333F00 /* SALogManagerTests.swift */; };
 		BA5C44A31B275CBA00A1F48B /* SaguaroLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = BA5C44A21B275CBA00A1F48B /* SaguaroLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA5C44A91B275CBA00A1F48B /* SaguaroLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5C449D1B275CBA00A1F48B /* SaguaroLogger.framework */; };
-		BA5C44B01B275CBA00A1F48B /* SaguaroLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C44AF1B275CBA00A1F48B /* SaguaroLoggerTests.swift */; };
 		BA5C44BA1B275D6100A1F48B /* SALogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C44B91B275D6100A1F48B /* SALogger.swift */; };
 		BA5C44BC1B275DB300A1F48B /* SALoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C44BB1B275DB300A1F48B /* SALoggerTests.swift */; };
 		BA5C44BE1B27690700A1F48B /* SAAppenders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C44BD1B27690700A1F48B /* SAAppenders.swift */; };
@@ -26,12 +27,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA4796D41B27A60400333F00 /* SALogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALogManager.swift; sourceTree = "<group>"; };
+		BA4796D61B27A63D00333F00 /* SALogManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALogManagerTests.swift; sourceTree = "<group>"; };
 		BA5C449D1B275CBA00A1F48B /* SaguaroLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SaguaroLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5C44A11B275CBA00A1F48B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA5C44A21B275CBA00A1F48B /* SaguaroLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaguaroLogger.h; sourceTree = "<group>"; };
 		BA5C44A81B275CBA00A1F48B /* SaguaroLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaguaroLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5C44AE1B275CBA00A1F48B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA5C44AF1B275CBA00A1F48B /* SaguaroLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaguaroLoggerTests.swift; sourceTree = "<group>"; };
 		BA5C44B91B275D6100A1F48B /* SALogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALogger.swift; sourceTree = "<group>"; };
 		BA5C44BB1B275DB300A1F48B /* SALoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALoggerTests.swift; sourceTree = "<group>"; };
 		BA5C44BD1B27690700A1F48B /* SAAppenders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAAppenders.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				BA5C44A01B275CBA00A1F48B /* Supporting Files */,
 				BA5C44BD1B27690700A1F48B /* SAAppenders.swift */,
 				BA5C44B91B275D6100A1F48B /* SALogger.swift */,
+				BA4796D41B27A60400333F00 /* SALogManager.swift */,
 			);
 			path = SaguaroLogger;
 			sourceTree = "<group>";
@@ -96,9 +99,9 @@
 		BA5C44AC1B275CBA00A1F48B /* SaguaroLoggerTests */ = {
 			isa = PBXGroup;
 			children = (
-				BA5C44AF1B275CBA00A1F48B /* SaguaroLoggerTests.swift */,
 				BA5C44AD1B275CBA00A1F48B /* Supporting Files */,
 				BA5C44BB1B275DB300A1F48B /* SALoggerTests.swift */,
+				BA4796D61B27A63D00333F00 /* SALogManagerTests.swift */,
 			);
 			path = SaguaroLoggerTests;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4796D51B27A60400333F00 /* SALogManager.swift in Sources */,
 				BA5C44BE1B27690700A1F48B /* SAAppenders.swift in Sources */,
 				BA5C44BA1B275D6100A1F48B /* SALogger.swift in Sources */,
 			);
@@ -227,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5C44B01B275CBA00A1F48B /* SaguaroLoggerTests.swift in Sources */,
+				BA4796D71B27A63D00333F00 /* SALogManagerTests.swift in Sources */,
 				BA5C44BC1B275DB300A1F48B /* SALoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
