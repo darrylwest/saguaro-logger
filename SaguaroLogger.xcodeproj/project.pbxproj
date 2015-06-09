@@ -12,6 +12,7 @@
 		BA5C44B01B275CBA00A1F48B /* SaguaroLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C44AF1B275CBA00A1F48B /* SaguaroLoggerTests.swift */; };
 		BA5C44BA1B275D6100A1F48B /* SALogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C44B91B275D6100A1F48B /* SALogger.swift */; };
 		BA5C44BC1B275DB300A1F48B /* SALoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C44BB1B275DB300A1F48B /* SALoggerTests.swift */; };
+		BA5C44BE1B27690700A1F48B /* SAAppenders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C44BD1B27690700A1F48B /* SAAppenders.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		BA5C44AF1B275CBA00A1F48B /* SaguaroLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaguaroLoggerTests.swift; sourceTree = "<group>"; };
 		BA5C44B91B275D6100A1F48B /* SALogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALogger.swift; sourceTree = "<group>"; };
 		BA5C44BB1B275DB300A1F48B /* SALoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALoggerTests.swift; sourceTree = "<group>"; };
+		BA5C44BD1B27690700A1F48B /* SAAppenders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAAppenders.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				BA5C44A21B275CBA00A1F48B /* SaguaroLogger.h */,
 				BA5C44A01B275CBA00A1F48B /* Supporting Files */,
+				BA5C44BD1B27690700A1F48B /* SAAppenders.swift */,
 				BA5C44B91B275D6100A1F48B /* SALogger.swift */,
 			);
 			path = SaguaroLogger;
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5C44BE1B27690700A1F48B /* SAAppenders.swift in Sources */,
 				BA5C44BA1B275D6100A1F48B /* SALogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +414,7 @@
 				BA5C44B51B275CBA00A1F48B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA5C44B61B275CBA00A1F48B /* Build configuration list for PBXNativeTarget "SaguaroLoggerTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +423,7 @@
 				BA5C44B81B275CBA00A1F48B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

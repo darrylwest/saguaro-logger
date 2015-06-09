@@ -1,5 +1,5 @@
 # Saguaro Logger
-_A multi-level, multi-target logger for iOS/OSX applications_
+_A swift multi-level, multi-target logger for iOS/OSX applications_
 
 ## Features
 
