@@ -1,4 +1,4 @@
-# saguaro logger
+# Saguaro Logger
 _A multi-level, multi-target logger for iOS/OSX applications_
 
 ## Features
@@ -28,4 +28,4 @@ log.warn("a warning")         // MyCategory 13:34:45.533 warn a warning
 ```
 
 - - -
-darryl.west@raincitysoftware.com | Version 00.90.101
+darryl.west@raincitysoftware.com | Version 00.90.11
