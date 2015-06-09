@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>84A7F588-2518-4C04-B744-DF1FBDC618FB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5FFCF03638028EAA09A6B85C8444F9E87BD87649</key>
+		<string>github.com:darrylwest/saguaro-logger.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SaguaroLogger/SaguaroLogger.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5FFCF03638028EAA09A6B85C8444F9E87BD87649</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:darrylwest/saguaro-logger.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5FFCF03638028EAA09A6B85C8444F9E87BD87649</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5FFCF03638028EAA09A6B85C8444F9E87BD87649</string>
+			<key>IDESourceControlWCCName</key>
+			<string>saguaro-logger</string>
+		</dict>
+	</array>
+</dict>
+</plist>
