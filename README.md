@@ -13,8 +13,8 @@ _A swift multi-level, multi-target logger for iOS/OSX applications_
 
 ## Installation
 
-* cocoapods
-* git subproject/framework
+* cocoapods (from repo)
+* git subproject/framework (from repo)
 
 ## How to use
 
@@ -28,4 +28,4 @@ log.warn("a warning")         // MyCategory 13:34:45.533 warn a warning
 ```
 
 - - -
-darryl.west@raincitysoftware.com | Version 00.90.11
+darryl.west@raincitysoftware.com | Version 00.90.12
