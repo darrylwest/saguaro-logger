@@ -11,6 +11,12 @@ import XCTest
 import SaguaroLogger
 
 class SALogManagerTests: XCTestCase {
+    
+    func createLoggers(manager: SALogManager) {
+        for cat in [ "Flarb", "Another", "AThird", "AndTheLast"] {
+            manager.createLogger( "\( cat )-\( arc4random() )" )
+        }
+    }
 
     func testInstance() {
         let manager = SALogManager( domain:"TestDomain" )
@@ -53,11 +59,19 @@ class SALogManagerTests: XCTestCase {
         XCTAssertEqual(logger.level, .Warn, "levels should match")
         
         XCTAssertEqual(manager.loggers.count, 1, "should have one logger")
+        
+        createLoggers( manager )
+        
+        XCTAssertEqual(manager.loggers.count, 5, "should have 5 logger")
     }
     
     func testFindLoggerByCategory() {
         let manager = SALogManager( domain:"TestDomain" )
         let logger = manager.createLogger("TestLogger", level: .Warn)
+        
+        createLoggers( manager )
+        
+        XCTAssertEqual(manager.loggers.count, 5, "should have 5 logger")
         
         XCTAssertEqual(logger.category, "TestLogger", "category should match")
         XCTAssertEqual(logger.level, .Warn, "levels should match")
