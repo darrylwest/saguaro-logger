@@ -22,24 +22,6 @@ public class SALogManager {
         return appender
     }
     
-    public func removeAppender(appender: LogAppenderType) -> LogAppenderType? {
-        
-        var idx:Int = -1
-        
-        // find the index
-        for (index, ap) in enumerate( appenders ) {
-            if ap.name == appender.name {
-                idx = index
-            }
-        }
-        
-        if idx >= 0 {
-            appenders.removeAtIndex( idx )
-        }
-
-        return appender
-    }
-    
     public func findAppenderByName(name: String) -> LogAppenderType? {
         for appender in appenders {
             if appender.name == name {

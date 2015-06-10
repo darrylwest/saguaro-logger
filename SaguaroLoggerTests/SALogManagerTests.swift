@@ -30,21 +30,39 @@ class SALogManagerTests: XCTestCase {
         XCTAssertEqual(manager.appenders.count, 1, "should have an appender")
     }
     
-    func testRemoveAdapters() {
+    func testFindAppenderByName() {
         let manager = SALogManager( domain:"TestDomain" )
-        let adapter = ConsoleLogAppender(level: .Info)
+        let appender = ConsoleLogAppender(level: .Debug)
         
-        XCTAssertEqual(manager.appenders.count, 0, "should be empty")
+        manager.addAppender(appender)
         
-        manager.addAppender( adapter )
+        let ap1 = manager.findAppenderByName( appender.name )
         
-        XCTAssertEqual(manager.appenders.count, 1, "should have an appender")
+        XCTAssertEqual( ap1!.name, appender.name, "should find an apender")
         
-        let adap = manager.removeAppender( adapter )
+        let ap2 = manager.findAppenderByName( "flarbenstien" )
         
-        XCTAssertTrue(adap != nil, "should not be nil")
-        XCTAssertEqual(manager.appenders.count, 0, "should be empty")
+        XCTAssertTrue( ap2 == nil, "should not find an apender")
     }
-
-
+    
+    func testCreateLogger() {
+        let manager = SALogManager( domain:"TestDomain" )
+        let logger = manager.createLogger("TestLogger", level: .Warn)
+        
+        XCTAssertEqual(logger.category, "TestLogger", "category should match")
+        XCTAssertEqual(logger.level, .Warn, "levels should match")
+        
+        XCTAssertEqual(manager.loggers.count, 1, "should have one logger")
+    }
+    
+    func testFindLoggerByCategory() {
+        let manager = SALogManager( domain:"TestDomain" )
+        let logger = manager.createLogger("TestLogger", level: .Warn)
+        
+        XCTAssertEqual(logger.category, "TestLogger", "category should match")
+        XCTAssertEqual(logger.level, .Warn, "levels should match")
+        
+        let log = manager.findLoggerByCategory("TestLogger")
+        XCTAssertEqual(log!.category, logger.category, "should find match")
+    }
 }
