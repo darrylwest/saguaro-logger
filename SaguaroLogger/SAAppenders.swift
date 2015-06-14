@@ -21,7 +21,7 @@ public class AbstractLogAppender {
     
     public func format(category cat:String, levelName name: String, message msg: String) -> String {
         let dt = dateFormatter.stringFromDate( NSDate() )
-        let str = "\( cat ) \( dt ) \( name ) \( msg )"
+        let str = "\( dt ) \( cat ) \( name ) \( msg )"
         
         return str
     }
