@@ -18,14 +18,33 @@ _A swift multi-level, multi-target logger for iOS/OSX applications_
 
 ## How to use
 
+The simplest uses case:
+
 ```
 // create a console logger with the default info log level
-let log = SALogger().createLogger( "MyCategory" )
+let log = SALogger( "MyCategory" )
 
-log.info("this is a message") // MyCategory 13:34:44.244 info this is a message
+log.info("this is a message") // 13:34:44.244 MyCategory info this is a message
 // .. <other code> ..
-log.warn("a warning")         // MyCategory 13:34:45.533 warn a warning
+log.warn("a warning")         // 13:34:45.533 MyCategory warn a warning
 ```
 
+Using the log manager to control a pool of loggers and appenders:
+
+```
+let manager = SALogManager("My Domain")
+manager.addAppender( ConsoleLogAppender(level: .Debug) )
+manager.addAppender( FileLogAppender(level: .Warn, file: "warnings.log") )
+
+// .. 
+
+log = manager.createLogger("MyCategory", level:.Debug)
+
+```
+
+## License: MIT
+
+Use as you wish.  Please fork and help out if you can.
+
 - - -
-darryl.west@raincitysoftware.com | Version 00.90.12
+darryl.west@raincitysoftware.com | Version 00.90.13
