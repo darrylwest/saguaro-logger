@@ -12,12 +12,11 @@ import XCTest
 class SALoggerTests: XCTestCase {
     
     func testInstance() {
-        // let logger = SALogger(category:"SALoggerTests")
+        let logger = SALogger(category:"SALoggerTests")
         
-        // XCTAssertNotNil(logger, "should not be nil")
-        // XCTAssertEqual(logger.level, LogLevel.Info, "should be info level")
-        
-        XCTAssert( true, "test")
+        XCTAssertNotNil(logger, "should not be nil")
+        XCTAssertEqual(logger.level, LogLevel.Info, "should be info level")
+
     }
     
 }
