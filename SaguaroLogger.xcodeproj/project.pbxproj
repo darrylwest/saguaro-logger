@@ -14,6 +14,7 @@
 		BAFD8D8D1B35DB3C00984C0E /* SALogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD8D8C1B35DB3C00984C0E /* SALogManager.swift */; };
 		BAFD8D8F1B35DBA000984C0E /* SALoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD8D8E1B35DBA000984C0E /* SALoggerTests.swift */; };
 		BAFD8D911B35E51600984C0E /* SALogManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD8D901B35E51600984C0E /* SALogManagerTests.swift */; };
+		BAFD8D931B35EB2600984C0E /* SAAppenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD8D921B35EB2600984C0E /* SAAppenderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		BAFD8D8C1B35DB3C00984C0E /* SALogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALogManager.swift; sourceTree = "<group>"; };
 		BAFD8D8E1B35DBA000984C0E /* SALoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALoggerTests.swift; sourceTree = "<group>"; };
 		BAFD8D901B35E51600984C0E /* SALogManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALogManagerTests.swift; sourceTree = "<group>"; };
+		BAFD8D921B35EB2600984C0E /* SAAppenderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAAppenderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				BA43EF761B35D8E400EC2A30 /* Info.plist */,
 				BAFD8D8E1B35DBA000984C0E /* SALoggerTests.swift */,
 				BAFD8D901B35E51600984C0E /* SALogManagerTests.swift */,
+				BAFD8D921B35EB2600984C0E /* SAAppenderTests.swift */,
 			);
 			path = SaguaroLoggerTests;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFD8D911B35E51600984C0E /* SALogManagerTests.swift in Sources */,
+				BAFD8D931B35EB2600984C0E /* SAAppenderTests.swift in Sources */,
 				BAFD8D8F1B35DBA000984C0E /* SALoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

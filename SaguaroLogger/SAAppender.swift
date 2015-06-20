@@ -17,7 +17,6 @@ public protocol LogAppenderType {
     var level:LogLevel { get set }
 }
 
-
 public class AbstractLogAppender: LogAppenderType {
     public var name:String {
         return "AbstractLogAppender"
@@ -54,6 +53,7 @@ public final class ConsoleLogAppender: AbstractLogAppender {
         print( msg )
     }
 }
+
 
 public final class MockLogAppender: AbstractLogAppender {
     override public var name:String {
