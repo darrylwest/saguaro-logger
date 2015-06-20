@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name        = "SaguaroLogger"
-  s.version     = "0.90.13"
-  s.summary     = "A swift multi-level, multi-target logger for iOS/OSX applications"
+  s.version     = "0.91.14"
+  s.summary     = "A swift 2.0 multi-level, multi-target logger for iOS/OSX applications"
   s.homepage    = "https://github.com/darrylwest/saguaro-logger"
   s.license     = { :type => "MIT" }
   s.authors     = { "darryl.west" => "darryl.west@raincitysoftware.com" }

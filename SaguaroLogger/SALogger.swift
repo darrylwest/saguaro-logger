@@ -79,13 +79,13 @@ public class SALogger: Logger {
     }
     
     public convenience init(category: String) {
-        var lvl = LogLevel.Info
-        var app = [ ConsoleLogAppender(level: lvl) as LogAppenderType ]
+        let lvl = LogLevel.Info
+        let app = [ ConsoleLogAppender(level: lvl) as LogAppenderType ]
         self.init(category: category, level: lvl, appenders: app )
     }
     
     public convenience init(category: String, level:LogLevel) {
-        var app = [ ConsoleLogAppender(level: level) as LogAppenderType ]
+        let app = [ ConsoleLogAppender(level: level) as LogAppenderType ]
         self.init(category: category, level: level, appenders: app)
     }
     

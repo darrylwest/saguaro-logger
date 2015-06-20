@@ -45,12 +45,12 @@ class SALoggerTests: XCTestCase {
         XCTAssertEqual(log.level, LogLevel.Warn, "logger should be debug level")
         XCTAssertEqual(appender.level, LogLevel.Warn, "appender should be debug level")
         
-        XCTAssertEqual( count( appender.messages ), 0, "should be zero messages")
+        XCTAssertEqual( appender.messages.count, 0, "should be zero messages")
         
         writeLogStatements( log )
         
         // println( appender.messages )
-        XCTAssertEqual( count( appender.messages ), 2, "should be 2 messages")
+        XCTAssertEqual( appender.messages.count, 2, "should be 2 messages")
     }
     
     func testMockLogAppender() {
@@ -61,12 +61,12 @@ class SALoggerTests: XCTestCase {
         XCTAssertEqual(log.level, LogLevel.Debug, "logger should be debug level")
         XCTAssertEqual(appender.level, LogLevel.Debug, "appender should be debug level")
         
-        XCTAssertEqual( count( appender.messages ), 0, "should be zero messages")
+        XCTAssertEqual( appender.messages.count, 0, "should be zero messages")
         
         writeLogStatements( log )
         
         // println( appender.messages )
-        XCTAssertEqual( count( appender.messages ), 4, "should be 4 messages")
+        XCTAssertEqual( appender.messages.count, 4, "should be 4 messages")
     }
     
     func testMultipleAppenders() {
@@ -77,12 +77,12 @@ class SALoggerTests: XCTestCase {
         XCTAssertNotNil(log, "should not be nil")
         XCTAssertEqual(log.level, LogLevel.Debug, "logger should be debug level")
         
-        XCTAssertEqual( count( mock.messages ), 0, "should be zero messages")
+        XCTAssertEqual( mock.messages.count, 0, "should be zero messages")
         
         writeLogStatements( log )
         
         // println( appender.messages )
-        XCTAssertEqual( count( mock.messages ), 4, "should be 4 messages")
+        XCTAssertEqual( mock.messages.count, 4, "should be 4 messages")
     }
 
 }

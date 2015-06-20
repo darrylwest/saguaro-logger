@@ -42,7 +42,7 @@ public class ConsoleLogAppender: AbstractLogAppender, LogAppenderType {
     public let name:String = "ConsoleLogAppender"
     
     override public func write(msg:String) {
-        println( msg )
+        print( msg )
     }
 }
 

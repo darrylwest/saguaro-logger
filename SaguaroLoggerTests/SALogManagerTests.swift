@@ -8,7 +8,7 @@
 
 import UIKit
 import XCTest
-import SaguaroLogger
+@testable import SaguaroLogger
 
 class SALogManagerTests: XCTestCase {
     
