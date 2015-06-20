@@ -11,9 +11,13 @@ import XCTest
 
 class SALoggerTests: XCTestCase {
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInstance() {
+        // let logger = SALogger(category:"SALoggerTests")
+        
+        // XCTAssertNotNil(logger, "should not be nil")
+        // XCTAssertEqual(logger.level, LogLevel.Info, "should be info level")
+        
+        XCTAssert( true, "test")
     }
     
 }

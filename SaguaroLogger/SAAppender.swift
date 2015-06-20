@@ -15,7 +15,7 @@ public protocol LogAppenderType {
     var level:LogLevel { get set }
 }
 
-/*
+
 public class AbstractLogAppender {
     let dateFormatter: NSDateFormatter
     public var level:LogLevel
@@ -39,6 +39,7 @@ public class AbstractLogAppender {
     }
 }
 
+/*
 public class ConsoleLogAppender: AbstractLogAppender, LogAppenderType {
     public let name:String = "ConsoleLogAppender"
     
