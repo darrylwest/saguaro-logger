@@ -1,6 +1,6 @@
 
 PROJECT = SaguaroLogger
-PLATFORM = 'platform=iOS Simulator,name=iPhone 6,OS=8.3'
+PLATFORM = 'platform=iOS Simulator,name=iPhone 6,OS=9.0'
 
 all:
 	@make test
