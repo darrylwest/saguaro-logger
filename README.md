@@ -13,7 +13,7 @@ _A swift 2.0 multi-level, multi-target logger for iOS/OSX applications_
 
 ## Installation
 
-* cocoapods (from repo)
+* cocoapods (unpublished, so pull from repo)
 * git subproject/framework (from repo)
 
 ## How to use
@@ -34,18 +34,18 @@ A simple logger that writes to NSLog:
 ```
 let log = SALogger( category: "MyNSCat", level: .Info, appenders: [ NSLogAppender() ])
 
-log.info("my NS log message") // 2015-06-20 12:22:53.244 xctest[10994:981258] NSTest info  my NS log message
+log.info("my NS log message") 
+// 2015-06-20 12:22:53.244 xctest[10994:981258] NSTest info  my NS log message
 ```
 
 Using the log manager to control a pool of loggers and appenders:
 
 ```
-let manager = SALogManager("My Domain")
-manager.addAppender( ConsoleLogAppender(level: .Debug) )
+let manager = SALogManager( domain: "My Domain")
+manager.addAppender( ConsoleLogAppender() )
 manager.addAppender( FileLogAppender(level: .Warn, file: "warnings.log") )
 
-// .. 
-
+// then some factory accesses the manager to create loggers
 log = manager.createLogger("MyCategory", level:.Debug)
 
 ```
