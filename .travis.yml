@@ -1,2 +1,9 @@
 language: objective-c
-script: "xcodebuild test -project SaguaroLogger.xcodeproj -scheme SaguaroLogger -destination \"platform=iOS Simulator,name=iPhone 6,OS=9.0\""
+osx_image: beta-xcode7.0
+before_install:
+    - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+    - gem install xcpretty  --no-rdoc --no-ri --no-document --quiet
+script: 
+    - set -o pipefail
+    - xcodebuild test -project SaguaroLogger.xcodeproj -scheme "SaguaroLogger iOS" -destination "platform=iOS Simulator,name=iPhone 6,OS=9.0" | xcpretty -c
+    - pod lib lint --quick
