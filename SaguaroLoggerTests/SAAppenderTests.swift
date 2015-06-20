@@ -12,7 +12,7 @@ import XCTest
 class SAAppenderTests: XCTestCase {
     
     func testConsoleLogAppender() {
-        let appender = ConsoleLogAppender(level: .Debug)
+        let appender = ConsoleLogAppender()
         
         XCTAssertEqual(appender.name, "ConsoleLogAppender", "name check")
         XCTAssertEqual(appender.level, LogLevel.Debug, "should be debug level")
@@ -44,7 +44,7 @@ class SAAppenderTests: XCTestCase {
     }
 
     func testMockLogAppender() {
-        let appender = MockLogAppender(level: .Debug)
+        let appender = MockLogAppender()
         
         XCTAssertEqual(appender.name, "MockLogAppender", "name check")
         XCTAssertEqual(appender.level, LogLevel.Debug, "should be debug level")

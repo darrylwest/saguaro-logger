@@ -84,4 +84,13 @@ class SALoggerTests: XCTestCase {
         XCTAssertEqual( mock.messages.count, 4, "should be 4 messages")
     }
     
+    func testNSLogAppender() {
+        
+        let log = SALogger(category: "NSTest", level: .Info, appenders:[ NSLogAppender() ])
+        
+        XCTAssertNotNil( log, "should not be nil" )
+        
+        log.info("my NS log message")
+    }
+    
 }
