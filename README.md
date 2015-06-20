@@ -18,7 +18,7 @@ _A swift 2.0 multi-level, multi-target logger for iOS/OSX applications_
 
 ## How to use
 
-The simplest uses case:
+### The simplest uses case:
 
 ```
 // create a console logger with the default info log level
@@ -29,7 +29,7 @@ log.info("this is a message") // 13:34:44.244 MyCategory info this is a message
 log.warn("a warning")         // 13:34:45.533 MyCategory warn a warning
 ```
 
-A simple logger that writes to NSLog:
+### A simple logger that writes to NSLog:
 
 ```
 let log = SALogger( category: "MyNSCat", level: .Info, appenders: [ NSLogAppender() ])
@@ -38,7 +38,7 @@ log.info("my NS log message")
 // 2015-06-20 12:22:53.244 xctest[10994:981258] NSTest info  my NS log message
 ```
 
-Using the log manager to control a pool of loggers and appenders:
+### Using the log manager to control a pool of loggers and appenders:
 
 ```
 let manager = SALogManager( domain: "My Domain")
