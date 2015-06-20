@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BA43EF691B35D8E400EC2A30 /* SaguaroLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = BA43EF681B35D8E400EC2A30 /* SaguaroLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA43EF701B35D8E400EC2A30 /* SaguaroLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43EF651B35D8E400EC2A30 /* SaguaroLogger.framework */; };
-		BA43EF751B35D8E400EC2A30 /* SaguaroLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43EF741B35D8E400EC2A30 /* SaguaroLoggerTests.swift */; };
 		BAFD8D891B35DABD00984C0E /* SALogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD8D881B35DABD00984C0E /* SALogger.swift */; };
 		BAFD8D8B1B35DB0C00984C0E /* SAAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD8D8A1B35DB0C00984C0E /* SAAppender.swift */; };
 		BAFD8D8D1B35DB3C00984C0E /* SALogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD8D8C1B35DB3C00984C0E /* SALogManager.swift */; };
@@ -31,7 +30,6 @@
 		BA43EF681B35D8E400EC2A30 /* SaguaroLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaguaroLogger.h; sourceTree = "<group>"; };
 		BA43EF6A1B35D8E400EC2A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA43EF6F1B35D8E400EC2A30 /* SaguaroLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaguaroLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA43EF741B35D8E400EC2A30 /* SaguaroLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaguaroLoggerTests.swift; sourceTree = "<group>"; };
 		BA43EF761B35D8E400EC2A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAFD8D881B35DABD00984C0E /* SALogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALogger.swift; sourceTree = "<group>"; };
 		BAFD8D8A1B35DB0C00984C0E /* SAAppender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAAppender.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 		BA43EF731B35D8E400EC2A30 /* SaguaroLoggerTests */ = {
 			isa = PBXGroup;
 			children = (
-				BA43EF741B35D8E400EC2A30 /* SaguaroLoggerTests.swift */,
 				BA43EF761B35D8E400EC2A30 /* Info.plist */,
 				BAFD8D8E1B35DBA000984C0E /* SALoggerTests.swift */,
 			);
@@ -216,7 +213,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA43EF751B35D8E400EC2A30 /* SaguaroLoggerTests.swift in Sources */,
 				BAFD8D8F1B35DBA000984C0E /* SALoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

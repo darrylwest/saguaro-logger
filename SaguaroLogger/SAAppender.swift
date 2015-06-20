@@ -17,7 +17,7 @@ public protocol LogAppenderType {
     var level:LogLevel { get set }
 }
 
-
+/*
 class AbstractLogAppender {
     let dateFormatter: NSDateFormatter
     var level:LogLevel
@@ -40,7 +40,7 @@ class AbstractLogAppender {
         dateFormatter.dateFormat = dateFormat!
     }
 }
-
+*/
 
 public class ConsoleLogAppender: LogAppenderType {
     public let name:String = "ConsoleLogAppender"
@@ -56,7 +56,7 @@ public class ConsoleLogAppender: LogAppenderType {
     }
     
     public func write(msg:String) {
-        // noop
+        print( msg )
     }
     
     public init(level:LogLevel, dateFormat:String? = "HH:mm:ss.SSS") {
@@ -67,16 +67,32 @@ public class ConsoleLogAppender: LogAppenderType {
     }
 }
 
-/*
-public class MockLogAppender: AbstractLogAppender, LogAppenderType {
+public class MockLogAppender: LogAppenderType {
     public let name:String = "MockLogAppender"
     public var messages = [String]()
     
-    override public func write(msg: String) {
+    let dateFormatter: NSDateFormatter
+    public var level:LogLevel
+    
+    public func format(category cat:String, levelName name: String, message msg: String) -> String {
+        let dt = dateFormatter.stringFromDate( NSDate() )
+        let str = "\( dt ) \( cat ) \( name ) \( msg )"
+        
+        return str
+    }
+    
+    public func write(msg: String) {
         self.messages.append( msg )
     }
+    
+    public init(level:LogLevel, dateFormat:String? = "HH:mm:ss.SSS") {
+        self.level = level
+        
+        self.dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = dateFormat!
+    }
 }
-*/
+
 
 // TODO: file appender, rolling file appender, remote appender, web socket appender
 // TODO: ability to add and remove appenders
