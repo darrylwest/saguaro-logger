@@ -36,8 +36,8 @@ public class AbstractLogAppender: LogAppenderType {
         // noop
     }
     
-    public init(level:LogLevel, dateFormat:String? = "HH:mm:ss.SSS") {
-        self.level = level
+    public init(level:LogLevel? = .Debug, dateFormat:String? = "HH:mm:ss.SSS") {
+        self.level = level!
         
         self.dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = dateFormat!
@@ -93,4 +93,3 @@ public final class MockLogAppender: AbstractLogAppender {
 
 
 // TODO: file appender, rolling file appender, remote appender, web socket appender
-// TODO: ability to add and remove appenders
