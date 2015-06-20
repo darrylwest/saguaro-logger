@@ -5,5 +5,5 @@ before_install:
     - gem install xcpretty  --no-rdoc --no-ri --no-document --quiet
 script: 
     - set -o pipefail
-    - xcodebuild -project SaguaroLogger.xcodeproj -scheme "SaguaroLogger" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6" test | xcpretty -c
+    # - xcodebuild -project SaguaroLogger.xcodeproj -scheme "SaguaroLogger" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6" test | xcpretty -c
     - pod lib lint --quick
