@@ -1,5 +1,5 @@
 # Saguaro Logger
-_A swift multi-level, multi-target logger for iOS/OSX applications_
+_A swift 2.0 multi-level, multi-target logger for iOS/OSX applications_
 
 ## Features
 
@@ -22,11 +22,19 @@ The simplest uses case:
 
 ```
 // create a console logger with the default info log level
-let log = SALogger( "MyCategory" )
+let log = SALogger( category: "MyCategory" )
 
 log.info("this is a message") // 13:34:44.244 MyCategory info this is a message
 // .. <other code> ..
 log.warn("a warning")         // 13:34:45.533 MyCategory warn a warning
+```
+
+A simple logger that writes to NSLog:
+
+```
+let log = SALogger( category: "MyNSCat", level: .Info, appenders: [ NSLogAppender() ])
+
+log.info("my NS log message") // 2015-06-20 12:22:53.244 xctest[10994:981258] NSTest info  my NS log message
 ```
 
 Using the log manager to control a pool of loggers and appenders:
@@ -47,4 +55,4 @@ log = manager.createLogger("MyCategory", level:.Debug)
 Use as you wish.  Please fork and help out if you can.
 
 - - -
-darryl.west@raincitysoftware.com | Version 00.91.14
+darryl.west@raincitysoftware.com | Version 00.91.15
