@@ -47,4 +47,4 @@ log = manager.createLogger("MyCategory", level:.Debug)
 Use as you wish.  Please fork and help out if you can.
 
 - - -
-darryl.west@raincitysoftware.com | Version 00.90.13
+darryl.west@raincitysoftware.com | Version 00.91.14
