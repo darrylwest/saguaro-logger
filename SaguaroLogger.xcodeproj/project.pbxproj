@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA43EF691B35D8E400EC2A30 /* SaguaroLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = BA43EF681B35D8E400EC2A30 /* SaguaroLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA43EF701B35D8E400EC2A30 /* SaguaroLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43EF651B35D8E400EC2A30 /* SaguaroLogger.framework */; };
+		BA43EF751B35D8E400EC2A30 /* SaguaroLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43EF741B35D8E400EC2A30 /* SaguaroLoggerTests.swift */; };
+		BAFD8D891B35DABD00984C0E /* SALogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD8D881B35DABD00984C0E /* SALogger.swift */; };
+		BAFD8D8B1B35DB0C00984C0E /* SAAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD8D8A1B35DB0C00984C0E /* SAAppender.swift */; };
+		BAFD8D8D1B35DB3C00984C0E /* SALogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD8D8C1B35DB3C00984C0E /* SALogManager.swift */; };
+		BAFD8D8F1B35DBA000984C0E /* SALoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD8D8E1B35DBA000984C0E /* SALoggerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA43EF711B35D8E400EC2A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA43EF5C1B35D8E400EC2A30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA43EF641B35D8E400EC2A30;
+			remoteInfo = SaguaroLogger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA43EF651B35D8E400EC2A30 /* SaguaroLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SaguaroLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA43EF681B35D8E400EC2A30 /* SaguaroLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaguaroLogger.h; sourceTree = "<group>"; };
+		BA43EF6A1B35D8E400EC2A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA43EF6F1B35D8E400EC2A30 /* SaguaroLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaguaroLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA43EF741B35D8E400EC2A30 /* SaguaroLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaguaroLoggerTests.swift; sourceTree = "<group>"; };
+		BA43EF761B35D8E400EC2A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAFD8D881B35DABD00984C0E /* SALogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALogger.swift; sourceTree = "<group>"; };
+		BAFD8D8A1B35DB0C00984C0E /* SAAppender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAAppender.swift; sourceTree = "<group>"; };
+		BAFD8D8C1B35DB3C00984C0E /* SALogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALogManager.swift; sourceTree = "<group>"; };
+		BAFD8D8E1B35DBA000984C0E /* SALoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALoggerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA43EF611B35D8E400EC2A30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA43EF6C1B35D8E400EC2A30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA43EF701B35D8E400EC2A30 /* SaguaroLogger.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA43EF5B1B35D8E400EC2A30 = {
+			isa = PBXGroup;
+			children = (
+				BA43EF671B35D8E400EC2A30 /* SaguaroLogger */,
+				BA43EF731B35D8E400EC2A30 /* SaguaroLoggerTests */,
+				BA43EF661B35D8E400EC2A30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA43EF661B35D8E400EC2A30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA43EF651B35D8E400EC2A30 /* SaguaroLogger.framework */,
+				BA43EF6F1B35D8E400EC2A30 /* SaguaroLoggerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA43EF671B35D8E400EC2A30 /* SaguaroLogger */ = {
+			isa = PBXGroup;
+			children = (
+				BA43EF681B35D8E400EC2A30 /* SaguaroLogger.h */,
+				BA43EF6A1B35D8E400EC2A30 /* Info.plist */,
+				BAFD8D881B35DABD00984C0E /* SALogger.swift */,
+				BAFD8D8A1B35DB0C00984C0E /* SAAppender.swift */,
+				BAFD8D8C1B35DB3C00984C0E /* SALogManager.swift */,
+			);
+			path = SaguaroLogger;
+			sourceTree = "<group>";
+		};
+		BA43EF731B35D8E400EC2A30 /* SaguaroLoggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA43EF741B35D8E400EC2A30 /* SaguaroLoggerTests.swift */,
+				BA43EF761B35D8E400EC2A30 /* Info.plist */,
+				BAFD8D8E1B35DBA000984C0E /* SALoggerTests.swift */,
+			);
+			path = SaguaroLoggerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BA43EF621B35D8E400EC2A30 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA43EF691B35D8E400EC2A30 /* SaguaroLogger.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BA43EF641B35D8E400EC2A30 /* SaguaroLogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA43EF791B35D8E400EC2A30 /* Build configuration list for PBXNativeTarget "SaguaroLogger" */;
+			buildPhases = (
+				BA43EF601B35D8E400EC2A30 /* Sources */,
+				BA43EF611B35D8E400EC2A30 /* Frameworks */,
+				BA43EF621B35D8E400EC2A30 /* Headers */,
+				BA43EF631B35D8E400EC2A30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SaguaroLogger;
+			productName = SaguaroLogger;
+			productReference = BA43EF651B35D8E400EC2A30 /* SaguaroLogger.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BA43EF6E1B35D8E400EC2A30 /* SaguaroLoggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA43EF7C1B35D8E400EC2A30 /* Build configuration list for PBXNativeTarget "SaguaroLoggerTests" */;
+			buildPhases = (
+				BA43EF6B1B35D8E400EC2A30 /* Sources */,
+				BA43EF6C1B35D8E400EC2A30 /* Frameworks */,
+				BA43EF6D1B35D8E400EC2A30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA43EF721B35D8E400EC2A30 /* PBXTargetDependency */,
+			);
+			name = SaguaroLoggerTests;
+			productName = SaguaroLoggerTests;
+			productReference = BA43EF6F1B35D8E400EC2A30 /* SaguaroLoggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA43EF5C1B35D8E400EC2A30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "darryl.west@raincitysoftware.com";
+				TargetAttributes = {
+					BA43EF641B35D8E400EC2A30 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					BA43EF6E1B35D8E400EC2A30 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = BA43EF5F1B35D8E400EC2A30 /* Build configuration list for PBXProject "SaguaroLogger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BA43EF5B1B35D8E400EC2A30;
+			productRefGroup = BA43EF661B35D8E400EC2A30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA43EF641B35D8E400EC2A30 /* SaguaroLogger */,
+				BA43EF6E1B35D8E400EC2A30 /* SaguaroLoggerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA43EF631B35D8E400EC2A30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA43EF6D1B35D8E400EC2A30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA43EF601B35D8E400EC2A30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFD8D8D1B35DB3C00984C0E /* SALogManager.swift in Sources */,
+				BAFD8D8B1B35DB0C00984C0E /* SAAppender.swift in Sources */,
+				BAFD8D891B35DABD00984C0E /* SALogger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA43EF6B1B35D8E400EC2A30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA43EF751B35D8E400EC2A30 /* SaguaroLoggerTests.swift in Sources */,
+				BAFD8D8F1B35DBA000984C0E /* SALoggerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA43EF721B35D8E400EC2A30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA43EF641B35D8E400EC2A30 /* SaguaroLogger */;
+			targetProxy = BA43EF711B35D8E400EC2A30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BA43EF771B35D8E400EC2A30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BA43EF781B35D8E400EC2A30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BA43EF7A1B35D8E400EC2A30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SaguaroLogger/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raincitysoftware.SaguaroLogger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA43EF7B1B35D8E400EC2A30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SaguaroLogger/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raincitysoftware.SaguaroLogger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BA43EF7D1B35D8E400EC2A30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SaguaroLoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raincitysoftware.SaguaroLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BA43EF7E1B35D8E400EC2A30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SaguaroLoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raincitysoftware.SaguaroLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA43EF5F1B35D8E400EC2A30 /* Build configuration list for PBXProject "SaguaroLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA43EF771B35D8E400EC2A30 /* Debug */,
+				BA43EF781B35D8E400EC2A30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA43EF791B35D8E400EC2A30 /* Build configuration list for PBXNativeTarget "SaguaroLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA43EF7A1B35D8E400EC2A30 /* Debug */,
+				BA43EF7B1B35D8E400EC2A30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA43EF7C1B35D8E400EC2A30 /* Build configuration list for PBXNativeTarget "SaguaroLoggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA43EF7D1B35D8E400EC2A30 /* Debug */,
+				BA43EF7E1B35D8E400EC2A30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA43EF5C1B35D8E400EC2A30 /* Project object */;
+}
