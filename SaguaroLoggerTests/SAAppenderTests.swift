@@ -26,6 +26,22 @@ class SAAppenderTests: XCTestCase {
         appender.level = LogLevel.Error
         XCTAssertEqual(appender.level, LogLevel.Error, "should be error level")
     }
+    
+    func testNSLogAppender() {
+        let appender = NSLogAppender(level: .Debug)
+        
+        XCTAssertEqual(appender.name, "NSLogAppender", "name check")
+        XCTAssertEqual(appender.level, LogLevel.Debug, "should be debug level")
+        
+        let msg = appender.format(category: "MyCategory", levelName: "debug", message: "my message")
+        
+        appender.write( msg )
+        
+        appender.level = LogLevel.Warn
+        XCTAssertEqual(appender.level, LogLevel.Warn, "should be warn level")
+        appender.level = LogLevel.Error
+        XCTAssertEqual(appender.level, LogLevel.Error, "should be error level")
+    }
 
     func testMockLogAppender() {
         let appender = MockLogAppender(level: .Debug)
@@ -35,7 +51,9 @@ class SAAppenderTests: XCTestCase {
         
         XCTAssertEqual(appender.messages.count, 0, "message count should be zero")
         
-        appender.write("my message")
+        let msg = appender.format(category: "MyCategory", levelName: "debug", message: "my message")
+
+        appender.write( msg )
         
         XCTAssertEqual(appender.messages.count, 1, "one message")
         

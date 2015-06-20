@@ -54,6 +54,27 @@ public final class ConsoleLogAppender: AbstractLogAppender {
     }
 }
 
+public final class NSLogAppender: LogAppenderType {
+    public var name:String {
+        return "NSLogAppender"
+    }
+    
+    public var level:LogLevel
+    
+    public func format(category cat:String, levelName name: String, message msg: String) -> String {
+        let str = "\( cat ) \( name ) \( msg )"
+        
+        return str
+    }
+    
+    public func write(msg:String) {
+        NSLog( msg )
+    }
+    
+    public init(level:LogLevel) {
+        self.level = level
+    }
+}
 
 public final class MockLogAppender: AbstractLogAppender {
     override public var name:String {
