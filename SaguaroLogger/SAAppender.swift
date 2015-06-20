@@ -17,33 +17,11 @@ public protocol LogAppenderType {
     var level:LogLevel { get set }
 }
 
-/*
-class AbstractLogAppender {
-    let dateFormatter: NSDateFormatter
-    var level:LogLevel
-    
-    func format(category cat:String, levelName name: String, message msg: String) -> String {
-        let dt = dateFormatter.stringFromDate( NSDate() )
-        let str = "\( dt ) \( cat ) \( name ) \( msg )"
-        
-        return str
-    }
-    
-    func write(msg:String) {
-        // noop
-    }
-    
-    init(level:LogLevel, dateFormat:String? = "HH:mm:ss.SSS") {
-        self.level = level
-        
-        self.dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = dateFormat!
-    }
-}
-*/
 
-public class ConsoleLogAppender: LogAppenderType {
-    public let name:String = "ConsoleLogAppender"
+public class AbstractLogAppender: LogAppenderType {
+    public var name:String {
+        return "AbstractLogAppender"
+    }
     
     let dateFormatter: NSDateFormatter
     public var level:LogLevel
@@ -56,7 +34,7 @@ public class ConsoleLogAppender: LogAppenderType {
     }
     
     public func write(msg:String) {
-        print( msg )
+        // noop
     }
     
     public init(level:LogLevel, dateFormat:String? = "HH:mm:ss.SSS") {
@@ -67,29 +45,28 @@ public class ConsoleLogAppender: LogAppenderType {
     }
 }
 
-public class MockLogAppender: LogAppenderType {
-    public let name:String = "MockLogAppender"
+public final class ConsoleLogAppender: AbstractLogAppender {
+    override public var name:String {
+        return "ConsoleLogAppender"
+    }
+    
+    override public func write(msg:String) {
+        print( msg )
+    }
+}
+
+public final class MockLogAppender: AbstractLogAppender {
+    override public var name:String {
+        return "MockLogAppender"
+    }
+    
     public var messages = [String]()
-    
-    let dateFormatter: NSDateFormatter
-    public var level:LogLevel
-    
-    public func format(category cat:String, levelName name: String, message msg: String) -> String {
-        let dt = dateFormatter.stringFromDate( NSDate() )
-        let str = "\( dt ) \( cat ) \( name ) \( msg )"
-        
-        return str
+    public func clear() {
+        messages.removeAll()
     }
     
-    public func write(msg: String) {
+    override public func write(msg: String) {
         self.messages.append( msg )
-    }
-    
-    public init(level:LogLevel, dateFormat:String? = "HH:mm:ss.SSS") {
-        self.level = level
-        
-        self.dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = dateFormat!
     }
 }
 
