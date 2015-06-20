@@ -92,7 +92,7 @@ public class SALogger: Logger {
     /**
         create a default info level logger with console appender; appender is created at the same level
      */
-    public init(category: String, level:LogLevel = .Info, appenders:[LogAppenderType]) {
+    public init(category: String, level:LogLevel, appenders:[LogAppenderType]) {
         self.category = category
         
         self.level = level

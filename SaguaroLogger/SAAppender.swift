@@ -36,6 +36,10 @@ public class AbstractLogAppender: LogAppenderType {
         // noop
     }
     
+    public convenience init() {
+        self.init( level: .Debug )
+    }
+    
     public init(level:LogLevel, dateFormat:String? = "HH:mm:ss.SSS") {
         self.level = level
         
@@ -71,8 +75,8 @@ public final class NSLogAppender: LogAppenderType {
         NSLog( msg )
     }
     
-    public init(level:LogLevel) {
-        self.level = level
+    public init(level:LogLevel? = .Debug) {
+        self.level = level!
     }
 }
 
