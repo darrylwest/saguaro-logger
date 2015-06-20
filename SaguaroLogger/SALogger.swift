@@ -26,8 +26,8 @@ public protocol Logger {
 
 public class SALogger: Logger {
     private var appenders:[ LogAppenderType ]
-    public let category: String
-    public var level: LogLevel
+    final public let category: String
+    final public var level: LogLevel
     
     private func log(levelName:String, _ msg:String) {
         // loop through the log appenders and send out...
@@ -38,37 +38,37 @@ public class SALogger: Logger {
         }
     }
     
-    public var isDebug:Bool {
+    final public var isDebug:Bool {
         return level.rawValue <= LogLevel.Debug.rawValue
     }
     
-    public func debug(msg: String) {
+    final public func debug(msg: String) {
         if isDebug {
             log("debug", msg)
         }
     }
     
-    public func info(msg: String) {
+    final public func info(msg: String) {
         if level.rawValue <= LogLevel.Info.rawValue {
             log("info ", msg)
         }
     }
     
-    public func warn(msg: String) {
+    final public func warn(msg: String) {
         if level.rawValue <= LogLevel.Warn.rawValue {
             log("warn ", msg)
         }
     }
     
-    public func error(msg: String) {
+    final public func error(msg: String) {
         log("error", msg)
     }
     
-    public var appenderList:[ LogAppenderType ] {
+    final public var appenderList:[ LogAppenderType ] {
         return appenders
     }
     
-    public func findAppenderByName(name: String) -> LogAppenderType? {
+    final public func findAppenderByName(name: String) -> LogAppenderType? {
         for appender in appenders {
             if appender.name == name {
                 return appender

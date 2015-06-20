@@ -1,2 +1,2 @@
 language: objective-c
-script: "xcodebuild test -project SaguaroLogger.xcodeproj -scheme SaguaroLogger -destination \"platform=iOS Simulator,name=iPhone 6,OS=8.3\""
+script: "xcodebuild test -project SaguaroLogger.xcodeproj -scheme SaguaroLogger -destination \"platform=iOS Simulator,name=iPhone 6,OS=9.0\""
