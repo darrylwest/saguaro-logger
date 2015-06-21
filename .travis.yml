@@ -2,7 +2,7 @@ language: objective-c
 osx_image: beta-xcode7.0
 before_install:
     - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
-    # - gem install xcpretty  --no-rdoc --no-ri --no-document --quiet
+    - gem install xcpretty  --no-rdoc --no-ri --no-document --quiet
 script: 
-    # - make test
+    - xctool test -project SaguaroLogger -scheme SaguaroLogger -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
     - pod lib lint --quick
