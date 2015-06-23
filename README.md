@@ -1,4 +1,6 @@
-# Saguaro Logger
+# Saguaro Logger 
+[![Build Status](https://travis-ci.org/darrylwest/saguaro-logger.svg?branch=master)](https://travis-ci.org/darrylwest/saguaro-logger)
+
 _A swift 2.0 multi-level, multi-target logger for iOS/OSX applications_
 
 ![](http://raincitysoftware.com/swift-logo.png)
