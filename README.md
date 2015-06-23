@@ -7,7 +7,7 @@ _A swift 2.0 multi-level, multi-target logger for iOS/OSX applications_
 
 ## Features
 
-* log levels: trace, debug, info, warn, error levels
+* log levels: debug, info, warn, error, and off levels
 * log message includes category (class name)
 * flexible formatters with default to `category HH:mm:ss.SSS LEVEL message`
 * appenders to specify targets like console, file, rolling file, websockets, json, etc
