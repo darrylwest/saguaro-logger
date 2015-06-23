@@ -1,7 +1,7 @@
 # Saguaro Logger
 _A swift 2.0 multi-level, multi-target logger for iOS/OSX applications_
 
-![](./swift-logo.svg)
+![](http://raincitysoftware.com/swift-logo.svg)
 
 ## Features
 
