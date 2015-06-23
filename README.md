@@ -1,9 +1,11 @@
 # Saguaro Logger 
-[![Build Status](https://travis-ci.org/darrylwest/saguaro-logger.svg?branch=master)](https://travis-ci.org/darrylwest/saguaro-logger)
+
+<a href="https://developer.apple.com/swift/"><img src="http://raincitysoftware.com/swift-logo.png" alt="swift" width="64" height="64" border="0" /></a>
 
 _A swift 2.0 multi-level, multi-target logger for iOS/OSX applications_
 
-![](http://raincitysoftware.com/swift-logo.png)
+<a href="https://developer.apple.com/swift/"><img src="http://raincitysoftware.com/swift2-badge.png" alt="" width="65" height="20" border="0" /></a>
+[![Build Status](https://travis-ci.org/darrylwest/saguaro-logger.svg?branch=master)](https://travis-ci.org/darrylwest/saguaro-logger)
 
 ## Features
 
