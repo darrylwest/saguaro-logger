@@ -6,7 +6,7 @@ all:
 	@make test
 
 test:
-	xcodebuild test -project $(PROJECT).xcodeproj -scheme $(PROJECT) -destination $(PLATFORM)
+	xcodebuild test -project $(PROJECT).xcodeproj -scheme $(PROJECT) -destination $(PLATFORM) | xcpretty -c
 
 watch:
 	@( ./watcher.js )
