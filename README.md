@@ -1,11 +1,13 @@
-# Saguaro Logger
+# Saguaro Logger 
+
 _A swift 2.0 multi-level, multi-target logger for iOS/OSX applications_
 
+<a href="https://developer.apple.com/swift/"><img src="http://raincitysoftware.com/swift2-badge.png" alt="" width="65" height="20" border="0" /></a>
 [![Build Status](https://travis-ci.org/darrylwest/saguaro-logger.svg?branch=master)](https://travis-ci.org/darrylwest/saguaro-logger)
 
 ## Features
 
-* log levels: trace, debug, info, warn, error levels
+* log levels: debug, info, warn, error, and off levels
 * log message includes category (class name)
 * flexible formatters with default to `category HH:mm:ss.SSS LEVEL message`
 * appenders to specify targets like console, file, rolling file, websockets, json, etc
@@ -57,4 +59,4 @@ log = manager.createLogger("MyCategory", level:.Debug)
 Use as you wish.  Please fork and help out if you can.
 
 - - -
-darryl.west@raincitysoftware.com | Version 00.91.15
+darryl.west@raincitysoftware.com | Version 00.91.17

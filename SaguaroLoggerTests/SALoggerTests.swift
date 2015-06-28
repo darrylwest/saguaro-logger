@@ -25,6 +25,19 @@ class SALoggerTests: XCTestCase {
         
         XCTAssertNotNil(logger, "should not be nil")
         XCTAssertEqual(logger.level, LogLevel.Info, "should be info level")
+        
+        XCTAssertEqual(logger.appenderList.count, 1, "should have one appender")
+        
+        if let appender = logger.findAppenderByName("ConsoleLogAppender") {
+            XCTAssertNotNil(appender.name, "should not be nil")
+        } else {
+            XCTFail("appender not found")
+        }
+        
+        if let appender = logger.findAppenderByName("flarb") {
+            print(appender.name)
+            XCTFail("should not find a badly named appender")
+        }
     }
     
     func testDebugLevel() {

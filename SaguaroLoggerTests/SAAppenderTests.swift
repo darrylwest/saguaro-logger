@@ -11,6 +11,19 @@ import XCTest
 
 class SAAppenderTests: XCTestCase {
     
+    func testAbastractLogAppender() {
+        let appender = AbstractLogAppender()
+        
+        XCTAssertNotNil(appender, "should not be nil")
+        XCTAssertEqual(appender.name, "AbstractLogAppender", "name check")
+        XCTAssertEqual(appender.level, LogLevel.Debug, "should be debug level")
+        
+        appender.write("this is an empty message")
+        
+        let a2 = AbstractLogAppender(level: LogLevel.Warn, dateFormat: "mm:ss.SSS")
+        XCTAssertEqual(a2.level, LogLevel.Warn, "should be warn level")
+    }
+    
     func testConsoleLogAppender() {
         let appender = ConsoleLogAppender()
         
