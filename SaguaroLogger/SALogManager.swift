@@ -22,6 +22,26 @@ public class SALogManager {
         return appender
     }
     
+    /// set the level to all appenders
+    public func setAppenderLevels(level:LogLevel) {
+        for var appender in appenders {
+            appender.level = level
+        }
+    }
+    
+    /// set the level of all loggers
+    public func setLoggerLevels(level:LogLevel) {
+        for var logger in loggers {
+            logger.level = level
+        }
+    }
+    
+    /// set the level of all appenders and loggers
+    public func setAllLevels(level:LogLevel) {
+        setLoggerLevels( level )
+        setAppenderLevels( level )
+    }
+    
     public func findAppenderByName(name: String) -> LogAppenderType? {
         for appender in appenders {
             if appender.name == name {

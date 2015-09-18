@@ -37,7 +37,7 @@ class SALogManagerTests: XCTestCase {
     
     func testFindAppenderByName() {
         let manager = SALogManager( domain:"TestDomain" )
-        let appender = ConsoleLogAppender(level: .Debug)
+        let appender = ConsoleLogAppender(level: LogLevel.Debug)
         
         manager.addAppender(appender)
         
@@ -55,7 +55,7 @@ class SALogManagerTests: XCTestCase {
         let logger = manager.createLogger("TestLogger", level: .Warn)
         
         XCTAssertEqual(logger.category, "TestLogger", "category should match")
-        XCTAssertEqual(logger.level, .Warn, "levels should match")
+        XCTAssertEqual(logger.level, LogLevel.Warn, "levels should match")
         
         XCTAssertEqual(manager.loggers.count, 1, "should have one logger")
         
@@ -73,10 +73,36 @@ class SALogManagerTests: XCTestCase {
         XCTAssertEqual(manager.loggers.count, 5, "should have 5 logger")
         
         XCTAssertEqual(logger.category, "TestLogger", "category should match")
-        XCTAssertEqual(logger.level, .Warn, "levels should match")
+        XCTAssertEqual(logger.level, LogLevel.Warn, "levels should match")
         
         let log = manager.findLoggerByCategory("TestLogger")
         XCTAssertEqual(log!.category, logger.category, "should find match")
+    }
+    
+    
+    func testSetAllLoggerLevels() {
+        let manager = SALogManager( domain:"TestDomain" )
+        let appender = ConsoleLogAppender(level: LogLevel.Debug)
+        
+        manager.addAppender(appender)
+        
+        for appender in manager.appenders {
+            XCTAssertEqual(appender.level, LogLevel.Debug, "check error")
+        }
+        
+        for logger in manager.loggers {
+            XCTAssertEqual(logger.level, LogLevel.Debug, "level check")
+        }
+        
+        manager.setAllLevels( LogLevel.Error )
+        
+        for appender in manager.appenders {
+            XCTAssertEqual(appender.level, LogLevel.Error, "check error")
+        }
+        
+        for logger in manager.loggers {
+            XCTAssertEqual(logger.level, LogLevel.Error, "level check")
+        }
     }
 }
 
