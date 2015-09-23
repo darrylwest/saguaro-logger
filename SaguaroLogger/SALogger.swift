@@ -44,24 +44,24 @@ public class SALogger: Logger {
     
     final public func debug(msg: String) {
         if isDebug {
-            log("debug", msg)
+            log("DEBUG", msg)
         }
     }
     
     final public func info(msg: String) {
         if level.rawValue <= LogLevel.Info.rawValue {
-            log("info ", msg)
+            log("INFO ", msg)
         }
     }
     
     final public func warn(msg: String) {
         if level.rawValue <= LogLevel.Warn.rawValue {
-            log("warn ", msg)
+            log("WARN ", msg)
         }
     }
     
     final public func error(msg: String) {
-        log("error", msg)
+        log("ERROR", msg)
     }
     
     final public var appenderList:[ LogAppenderType ] {
