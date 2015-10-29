@@ -13,7 +13,11 @@ public class SALogManager {
     
     public private(set) var appenders:[LogAppenderType] = [LogAppenderType]()
     public private(set) var loggers:[Logger] = [Logger]()
-    
+
+    public init(domain:String) {
+        self.domain = domain
+    }
+
     public func addAppender(appender: LogAppenderType) -> LogAppenderType {
         appenders.append( appender )
         
@@ -73,8 +77,5 @@ public class SALogManager {
         
         return logger!;
     }
-    
-    public init(domain:String) {
-        self.domain = domain
-    }
+
 }

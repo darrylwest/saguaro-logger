@@ -35,6 +35,8 @@ log.warn("a warning")         // 13:34:45.533 MyCategory warn a warning
 
 ### A simple logger that writes to NSLog:
 
+_Note: NSLog is buggy, and should not be use it for production builds..._
+
 ```
 let log = SALogger( category: "MyNSCat", level: .Info, appenders: [ NSLogAppender() ])
 
@@ -59,4 +61,4 @@ log = manager.createLogger("MyCategory", level:.Debug)
 Use as you wish.  Please fork and help out if you can.
 
 - - -
-darryl.west@raincitysoftware.com | Version 00.91.17
+darryl.west@raincitysoftware.com | Version 00.91.20
