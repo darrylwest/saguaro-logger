@@ -80,6 +80,29 @@ class SALoggerTests: XCTestCase {
         // println( appender.messages )
         XCTAssertEqual( appender.messages.count, 4, "should be 4 messages")
     }
+
+    func testFunctionParams() {
+        let appender = MockLogAppender(level: .Debug)
+        let log = SALogger(category:"MockLogger", level: .Debug, appenders: [ appender ])
+
+        XCTAssertNotNil(log, "should not be nil")
+        XCTAssertEqual(log.level, LogLevel.Debug, "logger should be debug level")
+        XCTAssertEqual(appender.level, LogLevel.Debug, "appender should be debug level")
+
+        XCTAssertEqual( appender.messages.count, 0, "should be zero messages")
+
+        log.info("this is a test: %@", "my string")
+
+        XCTAssertTrue( appender.messages[0].hasSuffix("my string") )
+
+        log.warn("this is a number: %x", 12345)
+        print( appender.messages )
+        XCTAssertTrue( appender.messages[1].hasSuffix("3039"))
+
+        log.error("this is a number: %d", 12345)
+        print( appender.messages )
+        XCTAssertTrue( appender.messages[2].hasSuffix("12345"))
+    }
     
     func testMultipleAppenders() {
         let mock = MockLogAppender(level: .Debug)
