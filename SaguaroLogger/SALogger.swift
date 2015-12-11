@@ -15,10 +15,10 @@ public enum LogLevel: Int {
 public protocol Logger {
     var category:String { get }
     var isDebug:Bool { get }
-    func debug(msg:String)
-    func info(msg:String)
-    func warn(msg:String)
-    func error(msg:String)
+    func debug(msg:String, _ obj:Any...)
+    func info(msg: String, _ obj:Any...)
+    func warn(msg: String, _ obj:Any...)
+    func error(msg: String, _ obj:Any...)
     var level:LogLevel { get set }
     var appenderList:[ LogAppenderType ] { get }
     func findAppenderByName(name: String) -> LogAppenderType?
@@ -42,25 +42,25 @@ public class SALogger: Logger {
         return level.rawValue <= LogLevel.Debug.rawValue
     }
     
-    final public func debug(msg: String) {
+    final public func debug(msg: String, _ obj:Any...) {
         if isDebug {
             log("DEBUG", msg)
         }
     }
     
-    final public func info(msg: String) {
+    final public func info(msg: String, _ obj:Any...) {
         if level.rawValue <= LogLevel.Info.rawValue {
             log("INFO ", msg)
         }
     }
     
-    final public func warn(msg: String) {
+    final public func warn(msg: String, _ obj:Any...) {
         if level.rawValue <= LogLevel.Warn.rawValue {
             log("WARN ", msg)
         }
     }
     
-    final public func error(msg: String) {
+    final public func error(msg: String, _ obj:Any...) {
         log("ERROR", msg)
     }
     
