@@ -28,9 +28,9 @@ _A swift 2.0 multi-level, multi-target logger for iOS/OSX applications_
 // create a console logger with the default info log level
 let log = SALogger( category: "MyCategory" )
 
-log.info("this is a message") // 13:34:44.244 MyCategory info this is a message
+log.info("hex message: %x", 15) // 13:34:44.244 MyCategory info hex message: ff
 // .. <other code> ..
-log.warn("a warning")         // 13:34:45.533 MyCategory warn a warning
+log.warn("warning: %@", "scary!") // 13:34:45.533 MyCategory warning: scary!
 ```
 
 ### A simple logger that writes to NSLog:
@@ -61,4 +61,4 @@ log = manager.createLogger("MyCategory", level:.Debug)
 Use as you wish.  Please fork and help out if you can.
 
 - - -
-darryl.west@raincitysoftware.com | Version 00.91.20
+darryl.west@raincitysoftware.com | Version 00.91.21
