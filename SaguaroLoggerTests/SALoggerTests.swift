@@ -16,8 +16,8 @@ class SALoggerTests: XCTestCase {
         log.info("and an info test")
         log.warn("warning!")
         
-        let fn = __FILE__.componentsSeparatedByString("/")
-        log.error("this is an error in file: \( fn.last! ) in func: \( __FUNCTION__ ) on line \( __LINE__ )")
+        let fn = #file.componentsSeparatedByString("/")
+        log.error("this is an error in file: \( fn.last! ) in func: \( #function ) on line \( #line )")
     }
     
     func testInstance() {
