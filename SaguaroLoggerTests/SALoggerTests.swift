@@ -11,12 +11,12 @@ import XCTest
 
 class SALoggerTests: XCTestCase {
     
-    func writeLogStatements(log: SALogger) {
+    func writeLogStatements(_ log: SALogger) {
         log.debug("this is a debug statement test...")
         log.info("and an info test")
         log.warn("warning!")
         
-        let fn = #file.componentsSeparatedByString("/")
+        let fn = #file.components(separatedBy: "/")
         log.error("this is an error in file: \( fn.last! ) in func: \( #function ) on line \( #line )")
     }
     
@@ -24,7 +24,7 @@ class SALoggerTests: XCTestCase {
         let logger = SALogger(category:"SALoggerTests")
         
         XCTAssertNotNil(logger, "should not be nil")
-        XCTAssertEqual(logger.level, LogLevel.Info, "should be info level")
+        XCTAssertEqual(logger.level, LogLevel.info, "should be info level")
         
         XCTAssertEqual(logger.appenderList.count, 1, "should have one appender")
         
@@ -41,21 +41,21 @@ class SALoggerTests: XCTestCase {
     }
     
     func testDebugLevel() {
-        let log = SALogger(category:"DebugLogger", level: .Debug)
+        let log = SALogger(category:"DebugLogger", level: .debug)
         
         XCTAssertNotNil(log, "should not be nil")
-        XCTAssertEqual(log.level, LogLevel.Debug, "should be debug level")
+        XCTAssertEqual(log.level, LogLevel.debug, "should be debug level")
         
         writeLogStatements( log )
     }
     
     func testWarnLevel() {
-        let appender = MockLogAppender(level: .Warn)
-        let log = SALogger(category:"WarnLogger", level: .Warn, appenders: [ appender ])
+        let appender = MockLogAppender(level: .warn)
+        let log = SALogger(category:"WarnLogger", level: .warn, appenders: [ appender ])
         
         XCTAssertNotNil(log, "should not be nil")
-        XCTAssertEqual(log.level, LogLevel.Warn, "logger should be debug level")
-        XCTAssertEqual(appender.level, LogLevel.Warn, "appender should be debug level")
+        XCTAssertEqual(log.level, LogLevel.warn, "logger should be debug level")
+        XCTAssertEqual(appender.level, LogLevel.warn, "appender should be debug level")
         
         XCTAssertEqual( appender.messages.count, 0, "should be zero messages")
         
@@ -66,12 +66,12 @@ class SALoggerTests: XCTestCase {
     }
     
     func testMockLogAppender() {
-        let appender = MockLogAppender(level: .Debug)
-        let log = SALogger(category:"MockLogger", level: .Debug, appenders: [ appender ])
+        let appender = MockLogAppender(level: .debug)
+        let log = SALogger(category:"MockLogger", level: .debug, appenders: [ appender ])
         
         XCTAssertNotNil(log, "should not be nil")
-        XCTAssertEqual(log.level, LogLevel.Debug, "logger should be debug level")
-        XCTAssertEqual(appender.level, LogLevel.Debug, "appender should be debug level")
+        XCTAssertEqual(log.level, LogLevel.debug, "logger should be debug level")
+        XCTAssertEqual(appender.level, LogLevel.debug, "appender should be debug level")
         
         XCTAssertEqual( appender.messages.count, 0, "should be zero messages")
         
@@ -82,12 +82,12 @@ class SALoggerTests: XCTestCase {
     }
 
     func testFunctionParams() {
-        let appender = MockLogAppender(level: .Debug)
-        let log = SALogger(category:"MockLogger", level: .Debug, appenders: [ appender ])
+        let appender = MockLogAppender(level: .debug)
+        let log = SALogger(category:"MockLogger", level: .debug, appenders: [ appender ])
 
         XCTAssertNotNil(log, "should not be nil")
-        XCTAssertEqual(log.level, LogLevel.Debug, "logger should be debug level")
-        XCTAssertEqual(appender.level, LogLevel.Debug, "appender should be debug level")
+        XCTAssertEqual(log.level, LogLevel.debug, "logger should be debug level")
+        XCTAssertEqual(appender.level, LogLevel.debug, "appender should be debug level")
 
         XCTAssertEqual( appender.messages.count, 0, "should be zero messages")
 
@@ -105,12 +105,12 @@ class SALoggerTests: XCTestCase {
     }
     
     func testMultipleAppenders() {
-        let mock = MockLogAppender(level: .Debug)
-        let appenders:[ LogAppenderType ] = [ mock, ConsoleLogAppender(level: .Info) ]
-        let log = SALogger(category:"MockLogger", level: .Debug, appenders: appenders)
+        let mock = MockLogAppender(level: .debug)
+        let appenders:[ LogAppenderType ] = [ mock, ConsoleLogAppender(level: .info) ]
+        let log = SALogger(category:"MockLogger", level: .debug, appenders: appenders)
         
         XCTAssertNotNil(log, "should not be nil")
-        XCTAssertEqual(log.level, LogLevel.Debug, "logger should be debug level")
+        XCTAssertEqual(log.level, LogLevel.debug, "logger should be debug level")
         
         XCTAssertEqual( mock.messages.count, 0, "should be zero messages")
         
@@ -122,7 +122,7 @@ class SALoggerTests: XCTestCase {
     
     func testNSLogAppender() {
         
-        let log = SALogger(category: "NSTest", level: .Info, appenders:[ NSLogAppender() ])
+        let log = SALogger(category: "NSTest", level: .info, appenders:[ NSLogAppender() ])
         
         XCTAssertNotNil( log, "should not be nil" )
         

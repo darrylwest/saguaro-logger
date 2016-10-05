@@ -11,7 +11,7 @@ import XCTest
 
 class SALogManagerTests: XCTestCase {
     
-    func createLoggers(manager: SALogManager) {
+    func createLoggers(_ manager: SALogManager) {
         for cat in [ "Flarb", "Another", "AThird", "AndTheLast"] {
             manager.createLogger( "\( cat )-\( arc4random() )" )
         }
@@ -30,14 +30,14 @@ class SALogManagerTests: XCTestCase {
         
         XCTAssertEqual(manager.appenders.count, 0, "should be empty")
         
-        manager.addAppender(ConsoleLogAppender(level: .Info))
+        manager.addAppender(ConsoleLogAppender(level: .info))
         
         XCTAssertEqual(manager.appenders.count, 1, "should have an appender")
     }
     
     func testFindAppenderByName() {
         let manager = SALogManager( domain:"TestDomain" )
-        let appender = ConsoleLogAppender(level: LogLevel.Debug)
+        let appender = ConsoleLogAppender(level: LogLevel.debug)
         
         manager.addAppender(appender)
         
@@ -52,10 +52,10 @@ class SALogManagerTests: XCTestCase {
     
     func testCreateLogger() {
         let manager = SALogManager( domain:"TestDomain" )
-        let logger = manager.createLogger("TestLogger", level: .Warn)
+        let logger = manager.createLogger("TestLogger", level: .warn)
         
         XCTAssertEqual(logger.category, "TestLogger", "category should match")
-        XCTAssertEqual(logger.level, LogLevel.Warn, "levels should match")
+        XCTAssertEqual(logger.level, LogLevel.warn, "levels should match")
         
         XCTAssertEqual(manager.loggers.count, 1, "should have one logger")
         
@@ -66,14 +66,14 @@ class SALogManagerTests: XCTestCase {
     
     func testFindLoggerByCategory() {
         let manager = SALogManager( domain:"TestDomain" )
-        let logger = manager.createLogger("TestLogger", level: .Warn)
+        let logger = manager.createLogger("TestLogger", level: .warn)
         
         createLoggers( manager )
         
         XCTAssertEqual(manager.loggers.count, 5, "should have 5 logger")
         
         XCTAssertEqual(logger.category, "TestLogger", "category should match")
-        XCTAssertEqual(logger.level, LogLevel.Warn, "levels should match")
+        XCTAssertEqual(logger.level, LogLevel.warn, "levels should match")
         
         let log = manager.findLoggerByCategory("TestLogger")
         XCTAssertEqual(log!.category, logger.category, "should find match")
@@ -82,26 +82,26 @@ class SALogManagerTests: XCTestCase {
     
     func testSetAllLoggerLevels() {
         let manager = SALogManager( domain:"TestDomain" )
-        let appender = ConsoleLogAppender(level: LogLevel.Debug)
+        let appender = ConsoleLogAppender(level: LogLevel.debug)
         
         manager.addAppender(appender)
         
         for appender in manager.appenders {
-            XCTAssertEqual(appender.level, LogLevel.Debug, "check error")
+            XCTAssertEqual(appender.level, LogLevel.debug, "check error")
         }
         
         for logger in manager.loggers {
-            XCTAssertEqual(logger.level, LogLevel.Debug, "level check")
+            XCTAssertEqual(logger.level, LogLevel.debug, "level check")
         }
         
-        manager.setAllLevels( LogLevel.Error )
+        manager.setAllLevels( LogLevel.error )
         
         for appender in manager.appenders {
-            XCTAssertEqual(appender.level, LogLevel.Error, "check error")
+            XCTAssertEqual(appender.level, LogLevel.error, "check error")
         }
         
         for logger in manager.loggers {
-            XCTAssertEqual(logger.level, LogLevel.Error, "level check")
+            XCTAssertEqual(logger.level, LogLevel.error, "level check")
         }
     }
 }

@@ -12,34 +12,34 @@ public protocol LogAppenderType {
     var name:String { get }
     
     func format(category cat:String, levelName name:String, message msg:String) -> String
-    func write(msg: String) -> Void
+    func write(_ msg: String) -> Void
     
     var level:LogLevel { get set }
 }
 
-public class AbstractLogAppender: LogAppenderType {
-    public var name:String {
+open class AbstractLogAppender: LogAppenderType {
+    open var name:String {
         return "AbstractLogAppender"
     }
     
-    let dateFormatter: NSDateFormatter
-    public var level:LogLevel
+    let dateFormatter: DateFormatter
+    open var level:LogLevel
     
-    public func format(category cat:String, levelName name: String, message msg: String) -> String {
-        let dt = dateFormatter.stringFromDate( NSDate() )
+    open func format(category cat:String, levelName name: String, message msg: String) -> String {
+        let dt = dateFormatter.string( from: Date() )
         let str = "\( dt ) \( cat ) \( name ) \( msg )"
         
         return str
     }
     
-    public func write(msg:String) {
+    open func write(_ msg:String) {
         // noop
     }
     
-    public init(level:LogLevel? = .Debug, dateFormat:String? = "HH:mm:ss.SSS") {
-        self.level = level!
+    public init(level:LogLevel = .debug, dateFormat:String? = "HH:mm:ss.SSS") {
+        self.level = level
         
-        self.dateFormatter = NSDateFormatter()
+        self.dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat!
     }
 }
@@ -49,7 +49,7 @@ public final class ConsoleLogAppender: AbstractLogAppender {
         return "ConsoleLogAppender"
     }
     
-    override public func write(msg:String) {
+    override public func write(_ msg:String) {
         print( msg )
     }
 }
@@ -67,12 +67,12 @@ public final class NSLogAppender: LogAppenderType {
         return str
     }
     
-    public func write(msg:String) {
+    public func write(_ msg:String) {
         NSLog( msg )
     }
     
-    public init(level:LogLevel? = .Debug) {
-        self.level = level!
+    public init(level:LogLevel = .debug) {
+        self.level = level
     }
 }
 
@@ -86,7 +86,7 @@ public final class MockLogAppender: AbstractLogAppender {
         messages.removeAll()
     }
     
-    override public func write(msg: String) {
+    override public func write(_ msg: String) {
         self.messages.append( msg )
     }
 }
